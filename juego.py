@@ -33,6 +33,16 @@ def circles(start, end):
 
 def rectangle(start, end):
     "Draw rectangle from start to end."
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill()
+    goto(end.x,start.y)
+    goto(end.x,end.y)
+    goto(start.x,end.y)
+    goto(start.x,start.y)
+    end_fill()
+
     pass  # TODO
 
 def triangle(start, end):
