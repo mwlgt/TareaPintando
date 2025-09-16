@@ -23,19 +23,24 @@ def square(start, end):
 
 def circles(start, end):
     "Draw circle from start to end."
+    # Set up position
     up()
     goto(start.x, start.y)
     down()
-    
+
+    # Draw circle
     begin_fill()
     circle(end.x - start.x)
     end_fill()
 
 def rectangle(start, end):
     "Draw rectangle from start to end."
+    # Set up position
     up()
     goto(start.x, start.y)
     down()
+
+    # Draw rectangle
     begin_fill()
     goto(end.x,start.y)
     goto(end.x,end.y)
@@ -43,11 +48,20 @@ def rectangle(start, end):
     goto(start.x,start.y)
     end_fill()
 
-    pass  # TODO
 
 def triangle(start, end):
     "Draw triangle from start to end."
-    pass  # TODO
+    # Set up position
+    up()
+    goto(start.x,start.y)
+    down()
+
+    # Draw triangle
+    begin_fill()
+    goto(end.x,start.y)
+    goto((end.x+start.x)/2,end.y)
+    goto(start.x,start.y)
+    end_fill()
 
 def tap(x, y):
     "Store starting point or draw shape."
